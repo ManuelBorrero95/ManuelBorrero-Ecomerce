@@ -1,12 +1,12 @@
 var token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjM5ZTFmMmQ2MzdmMzAwMTVhZGJmNTciLCJpYXQiOjE3MTUwNjk0MjYsImV4cCI6MTcxNjI3OTAyNn0.yvr-0VqDN9BogoYC_n4PqFqFpQkxttZzy69Yo014O2c"
-
-
-
-
-
-
 document.getElementById("form").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevents the default form submission
+
+    const imageUrlInput = document.getElementById('imageUrl');
+    const imageUrl = imageUrlInput.value.trim();
+    
+    // Utilizzo dell'operatore ternario per impostare imageUrl
+    const finalImageUrl = imageUrl === '' ? 'https://picsum.photos/id/1/200/300' : imageUrl;
 
     // Fetch POST request
     fetch('https://striveschool-api.herokuapp.com/api/product/', {
@@ -21,7 +21,7 @@ document.getElementById("form").addEventListener("submit", function(event) {
             description: document.getElementById('description').value,
             brand: document.getElementById('brand').value,
             price: document.getElementById('price').value,
-            imageUrl: document.getElementById('imageUrl').value
+            imageUrl: finalImageUrl
         })
     })
     .then(response => {

@@ -30,7 +30,7 @@
     // Aggiungi l'evento di click per il pulsante "Dettagli"
     detailsButton.addEventListener('click', function() {
       // Redirect alla pagina di dettaglio del prodotto con l'ID come query string
-      window.location.href = `./Detail.html?id=${item._id}`;
+      window.location.href = `./backend_detail.html?id=${item._id}`;
     });
   
     contentDiv.appendChild(title);
