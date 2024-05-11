@@ -9,3 +9,6 @@ Come esercitazione di fine modulo per **Epicode** ci è stato richiesto di crear
 # Scelte Tecniche
 
 1) Ho scelto di utilizzare tailwind con libreria CSS per velocizzare l'implentazione del layout grafico.
+
+2) Il progetto e costruito da avere una sezione backend(dove vengono c'è la possibilita di fare le orazioni CRUD) completamente separata dalla parte di front end
+3) ho scelto di utilizzare il servizio di "https://picsum.photos/images" per non dover gestire le immagini
