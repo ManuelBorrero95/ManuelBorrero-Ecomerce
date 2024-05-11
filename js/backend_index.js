@@ -14,13 +14,17 @@
     const title = document.createElement('h2');
     title.textContent = item.name;
     title.className = 'text-xl font-semibold mb-2';
+
+    const marca = document.createElement('h2');
+    marca.textContent = item.brand;
+    marca.className = 'text-xl font-semibold mb-2';
   
     const description = document.createElement('p');
     description.textContent = item.description;
     description.className = 'text-gray-700 mb-4';
   
     const price = document.createElement('p');
-    price.textContent = 'Prezzo: $' + item.price.toFixed(2);
+    price.textContent = 'Prezzo: €' + item.price.toFixed(2);
     price.className = 'text-gray-900 font-semibold';
   
     const detailsButton = document.createElement('button');
@@ -34,6 +38,7 @@
     });
   
     contentDiv.appendChild(title);
+    contentDiv.appendChild(marca);
     contentDiv.appendChild(description);
     contentDiv.appendChild(price);
     contentDiv.appendChild(detailsButton);

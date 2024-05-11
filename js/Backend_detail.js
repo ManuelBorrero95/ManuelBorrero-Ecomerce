@@ -28,7 +28,7 @@ function fetchProductDetails(productId) {
         document.getElementById('productImage').src = product.imageUrl;
         document.getElementById('productName').textContent = product.name;
         document.getElementById('productDescription').textContent = product.description;
-        document.getElementById('productPrice').textContent = 'Prezzo: $' + product.price.toFixed(2);
+        document.getElementById('productPrice').textContent = 'Prezzo: €' + product.price.toFixed(2);
         
         // Aggiungi l'evento di click per il pulsante "Elimina Prodotto"
         document.getElementById('deleteButton').addEventListener('click', function() {

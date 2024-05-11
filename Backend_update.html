@@ -8,6 +8,13 @@
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100">
+<div id="updateSuccessModal" class="fixed inset-0 flex items-center justify-center z-10 hidden">
+        <div class="bg-white border border-gray-200 rounded-lg p-8 max-w-md mx-auto">
+            <p class="text-lg font-semibold mb-4">Prodotto Aggiornato</p>
+            <p class="mb-4">Il prodotto è stato aggiornato con successo.</p>
+            <button id="closeModalButton" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Chiudi</button>
+        </div>
+</div>
 <div class="flex items-center justify-center h-screen">
     <div class="bg-white shadow-md rounded-lg overflow-hidden w-80">
         <div class="p-4">
@@ -27,7 +34,7 @@
                 </div>
                 <div>
                     <label for="price" class="block text-sm font-medium text-gray-700">Prezzo</label>
-                    <input type="number" id="price" name="price" class="mt-1 p-2 w-full border rounded-md" required>
+                    <input type="text" pattern="\d+(\.\d{1,2})?"  id="price" name="price" class="mt-1 p-2 w-full border rounded-md" required>
                 </div>
                 <div>
                     <label for="imageUrl" class="block text-sm font-medium text-gray-700">URL Immagine</label>

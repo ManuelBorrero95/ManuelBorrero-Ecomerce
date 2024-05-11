@@ -66,9 +66,11 @@ function updateProduct(productId, formData) {
     })
     .then(data => {
         console.log('Prodotto aggiornato con successo:', data);
-        alert('Prodotto aggiornato con successo.');
-        // Reindirizza l'utente alla pagina di dettaglio del prodotto dopo l'aggiornamento
-        window.location.href = 'dettaglio_prodotto.html?id=' + productId;
+        showUpdateSuccessModal();
+        setTimeout(function(){
+            hideUpdateSuccessModal();
+            window.location.href = './backend_index.html';
+        }, 2500);       
     })
     .catch(error => {
         console.error('Si è verificato un errore:', error);
@@ -98,4 +100,21 @@ document.getElementById('editProductForm').addEventListener('submit', function(e
 
     // Aggiorna il prodotto utilizzando i dati del modulo di aggiornamento
     updateProduct(productId, formData);
+});
+
+function showUpdateSuccessModal() {
+    const modal = document.getElementById('updateSuccessModal');
+    modal.classList.remove('hidden');
+}
+
+// Funzione per nascondere la modale di conferma aggiornamento
+function hideUpdateSuccessModal() {
+    const modal = document.getElementById('updateSuccessModal');
+    modal.classList.add('hidden');
+}
+
+// Gestisci l'evento click sul pulsante "Chiudi" della modale
+document.getElementById('closeModalButton').addEventListener('click', function() {
+    // Nascondi la modale di conferma aggiornamento
+    hideUpdateSuccessModal();
 });
