@@ -8,6 +8,17 @@
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100">
+    <nav class="bg-gray-800 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div>
+                <a href="#" class="text-white text-xl font-bold">ManuelBorrero</a>
+            </div>
+            <div class="flex items-center">
+                <a href="./backend_Index.html" class="text-gray-300 hover:text-white mr-4">Home</a>
+                <a href="./backend_newProduct.html" class="text-gray-300 hover:text-white mr-4">New Product</a>                                
+            </div>
+        </div>
+    </nav>    
 <div id="updateSuccessModal" class="fixed inset-0 flex items-center justify-center z-10 hidden">
         <div class="bg-white border border-gray-200 rounded-lg p-8 max-w-md mx-auto">
             <p class="text-lg font-semibold mb-4">Prodotto Aggiornato</p>
@@ -40,8 +51,10 @@
                     <label for="imageUrl" class="block text-sm font-medium text-gray-700">URL Immagine</label>
                     <input type="text" id="imageUrl" name="imageUrl" class="mt-1 p-2 w-full border rounded-md" required>
                 </div>
-                <div>
+                
+                <div class="flex space-x-4">
                     <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Salva Modifiche</button>
+                    <button id="btn-cancel" class="mt-4 bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">Annulla Modifiche</button>
                 </div>
             </form>
         </div>

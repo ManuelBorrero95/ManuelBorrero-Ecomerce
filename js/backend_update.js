@@ -101,3 +101,8 @@ function hideUpdateSuccessModal() {
 document.getElementById('closeModalButton').addEventListener('click', function() {
     hideUpdateSuccessModal();
 });
+
+
+document.getElementById("btn-cancel").addEventListener('click', function() {
+    window.location.href = `./backend_detail.html?id=${productId}`;
+});
